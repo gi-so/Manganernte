@@ -1,0 +1,2 @@
+Main-Class: mangan.Visualisation
+Class-Path: lib/core.jar lib/controlP5.jar

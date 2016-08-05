@@ -1,0 +1,14 @@
+Filename            Deploymentstrategy  Robots  Viewingrange  Iterations  Mangan        Distance      Mangan per Iteration  Distance per Iteration  
+20160803124130.txt  angularspiral          100            50          85    725,100000   1589,782609              8,530588               18,703325  
+20160803124111.txt  angularspiral           50            50          82    433,610000    788,708547              5,287927                9,618397  
+20160803123154.txt  angularspiral           50            50          83    443,150000    809,389206              5,339157                9,751677  
+20160803123137.txt  angularspiral           50            50          78    308,580000    538,562152              3,956154                6,904643  
+20160803123022.txt  spiral                  50            50          78    301,840000    530,970590              3,869744                6,807315  
+20160803123016.txt  spiral                  49            50          63     53,070000    198,706618              0,842381                3,154073  
+
+Best run:
+20160803124130.txt  angularspiral          100            50          85    725,100000   1589,782609              8,530588               18,703325  
+
+Most moving of robots:
+20160803124130.txt  angularspiral          100            50          85    725,100000   1589,782609              8,530588               18,703325  
+

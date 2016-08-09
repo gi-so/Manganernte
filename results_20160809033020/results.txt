@@ -1,0 +1,2 @@
+Filename            Deploymentstrategy  Robots  Viewingrange  Iterations  Mangan        Distance      Mangan per Iteration  Distance per Iteration  
+20160809033037.txt  circle                  49            50          63     90,150000    198,706618              1,430952                3,154073  

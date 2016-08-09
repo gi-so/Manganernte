@@ -1,23 +1,14 @@
-//Simulator.Debug() test missing at some printouts
-
 package mangan;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/** 
- * 
- * Deploys an amount of robots following a circle pattern where every robots keeps the distance with 
- * the inner and outer layer or perimeter as well as the other robots in its layer.
- * External layer distributes the last robots equally.
- *  
- */
-public class DeployCircle implements DeploymentStrategy {	
+public class DeployEmptyCircle implements DeploymentStrategy {	
 
 	public void deployRobots (int amount, int BaseDist)
 	{
 		BaseDist = 20;		//Why set to 20 when given as parameter?
-		int level = 1;
+		int level = 10;
 		
 		System.out.println("Robot Number = \t" +amount +"\tDistance = \t" +BaseDist);
 		List<Coordinates> coordinates = new ArrayList<Coordinates>();
@@ -28,16 +19,7 @@ public class DeployCircle implements DeploymentStrategy {
 		int x = CenterX;
 		int y = CenterY;
 
-		try {
-			Simulator.createRobot(x, y);
-			coordinates.add(new Coordinates(x, y));
-
-			System.out.println("Info: Deployed center robot at x:" + x + " y: " + y + ".");
-			amount -= 1;
-		} catch (RobotHasNoNeighborException ex) {
-			System.out.println("Error: " + ex.getMessage());
-		}
-		
+				
 		// Deploy the rest of the robots around the center ones
 		while(amount > coordinates.size()) {
 			
@@ -68,4 +50,5 @@ public class DeployCircle implements DeploymentStrategy {
 			level++;
 		}
 	}
+
 }

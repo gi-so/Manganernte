@@ -489,24 +489,21 @@ public class Visualisation extends PApplet {
 
 		menuRadioButton = cp5.addRadioButton("deployAlgorithm").setPosition(menuElementPos, height - 325)
 				.setSize(10, 10).setColorForeground(color(120)).setColorActive(color(255)).setColorLabel(color(255))
-				.setItemsPerRow(1).setSpacingColumn(5).addItem("Random", 0).addItem("Square", 1).addItem("Circle", 2)
-				.addItem("Gauss", 3).addItem("Bad Centers", 4).addItem("Spiral", 5).addItem("angular Spiral", 6)
-				.addItem("Manual", 7).addItem("All", 8).activate(1);
-		RobotsTF = cp5.addTextfield("Robots").setPosition(menuElementPos, height - 220).setSize(menuWidth, menuHeight)
+				.setItemsPerRow(1).setSpacingColumn(5).addItem("Random", 0).addItem("Square", 1).addItem("Circle", 2).addItem("Empty Circle", 3)
+				.addItem("Gauss", 4).addItem("Bad Centers", 5).addItem("Spiral", 6).addItem("angular Spiral", 7)
+				.addItem("Manual", 8).addItem("All", 9).activate(1);
+		RobotsTF = cp5.addTextfield("Robots").setPosition(menuElementPos, height - 195).setSize(menuWidth, menuHeight)
 				// .setRange(2,100)
 				.setDefaultValue(50);
 				
-		ViewingRangeTF = cp5.addTextfield("ViewingRange").setPosition(menuElementPos, height - 195)
+		ViewingRangeTF = cp5.addTextfield("ViewingRange").setPosition(menuElementPos, height - 170)
 				.setSize(menuWidth, menuHeight)
 				// .setRange(10,400)
 				.setDefaultValue(50);
 		cp5.getController("ViewingRange").getCaptionLabel().align(ControlP5.RIGHT, ControlP5.BOTTOM).setPaddingX(0);
 
 		cp5.getController("Robots").getCaptionLabel().align(ControlP5.RIGHT, ControlP5.BOTTOM).setPaddingX(0);
-		SpeedTF = cp5.addTextfield("Speed").setPosition(menuElementPos, height - 170).setSize(menuWidth, menuHeight)
-				// .setRange(2,100)
-				.setDefaultValue(20);
-		cp5.getController("Speed").getCaptionLabel().align(ControlP5.RIGHT, ControlP5.BOTTOM).setPaddingX(0);
+		
 				
 		cp5.addButton("start").setPosition(menuElementPos, height - 125).setSize(menuWidth, menuHeight)
 				.setColorForeground(color(120)).setColorActive(color(255));
@@ -618,12 +615,12 @@ public class Visualisation extends PApplet {
 	 *            the value of the used radiobutton.
 	 */
 	public void deployAlgorithm(int a) {
-		if (a == 7) {
+		if (a == 8) {
 			manual = true;
 			all = false;
 			Simulator.setDeployAlgorithm(a); // Only to set the string for
 												// saving to file
-		} else if (a == 8) {
+		} else if (a == 9) {
 			manual = false;
 			all = true;
 			// Prepare the first iteration with the first mode

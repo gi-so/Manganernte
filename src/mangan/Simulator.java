@@ -516,26 +516,31 @@ public class Simulator {
 			DeployAlg = "circle";
 			break;
 		case 3:
+			DEPLOYALGORITHM = new DeploymentContext(new DeployEmptyCircle());
+			System.out.println("Deployalgorithm: Empty Circle");
+			DeployAlg = "empty circle";
+			break;
+		case 4:
 			DEPLOYALGORITHM = new DeploymentContext(new DeployGauss());
 			System.out.println("Deployalgorithm: Gauss");
 			DeployAlg = "gauss";
 			break;
-		case 4:
+		case 5:
 			DEPLOYALGORITHM = new DeploymentContext(new DeployBadCenters());
 			System.out.println("Deployalgorithm: Bad Centers");
 			DeployAlg = "badcenters";
 			break;
-		case 5:
+		case 6:
 			DEPLOYALGORITHM = new DeploymentContext(new DeploySpiral());
 			System.out.println("Deployalgorithm: Spiral");
 			DeployAlg = "spiral";
 			break;
-		case 6:
+		case 7:
 			DEPLOYALGORITHM = new DeploymentContext(new DeployAngularSpiral());
 			System.out.println("Deployalgorithm: Angular Spiral");
 			DeployAlg = "angularspiral";
 			break;
-		case 7:
+		case 8:
 			System.out.println("Deployalgorithm: Manual");
 			DeployAlg = "manual";
 			break;
